@@ -32,4 +32,4 @@
   └── resources
   └── application.properties
 
-
+1) Project is designed using the Layered Architecture Pattern,

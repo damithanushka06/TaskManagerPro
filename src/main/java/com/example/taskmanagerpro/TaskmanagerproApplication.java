@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TaskmanagerproApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskmanagerproApplication.class, args);
+		try {
+			SpringApplication.run(TaskmanagerproApplication.class, args);
+		} catch (Exception exception) {
+           exception.printStackTrace();
+		}
 	}
-
 }
