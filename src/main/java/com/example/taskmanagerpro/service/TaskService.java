@@ -1,6 +1,6 @@
-package service;
+package com.example.taskmanagerpro.service;
 
-import entity.Task;
+import com.example.taskmanagerpro.entity.Task;
 import org.springframework.stereotype.Service;
 
 @Service

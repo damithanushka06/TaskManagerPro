@@ -1,10 +1,10 @@
-package service_impl;
+package com.example.taskmanagerpro.service_impl;
 
-import entity.Task;
+import com.example.taskmanagerpro.entity.Task;
+import com.example.taskmanagerpro.repository.TaskRepository;
+import com.example.taskmanagerpro.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.TaskRepository;
-import service.TaskService;
 
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -14,7 +14,9 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task createTask(Task task) {
-        return taskRepository.save(task);
+        Task savedTask = taskRepository.save(task);
+        System.out.println("Task saved: " + savedTask);  // Debug line
+        return savedTask;
     }
 
     @Autowired
