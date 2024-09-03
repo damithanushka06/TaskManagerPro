@@ -21,6 +21,17 @@ public class TaskController {
         return new ResponseEntity<>(createdTask, HttpStatus.CREATED);
     }
 
+    @GetMapping("/get_task_by_id")
+    public Task getTaskById(@RequestParam Integer id){
+        return taskService.getTaskById(id);
+    }
+
+
+    @PutMapping("/update_task")
+    public Task updateTask(@RequestParam Integer id, @RequestParam String title){
+        return taskService.updateTask(id, title);
+    }
+
     @Autowired
     private void setTaskService(TaskService taskService){
         this.taskService = taskService;
