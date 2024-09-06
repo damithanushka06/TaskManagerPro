@@ -3,8 +3,6 @@ package com.example.taskmanagerpro.service_impl;
 import com.example.taskmanagerpro.entity.Task;
 import com.example.taskmanagerpro.repository.TaskRepository;
 import com.example.taskmanagerpro.service.TaskService;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +10,6 @@ import java.util.Optional;
 
 @Service
 public class TaskServiceImpl implements TaskService {
-
-    @PersistenceContext
-    private EntityManager entityManager;
 
 
     private TaskRepository taskRepository;
